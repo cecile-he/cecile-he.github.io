@@ -362,6 +362,41 @@
 
 				});
 
+				// TESTING BACKGROUND CHANGE ON BUTTON CLICK HEYYYYY
+
+				var bgButton = document.createElement("button"); //create a button in the HTML
+				bgButton.innerHTML = "let's switch it up!";
+
+				var bodylicious = document.getElementsByTagName("body")[0];
+				bodylicious.appendChild(bgButton);
+
+				bgButton.id += "button-background";
+
+				// bgButton.addEventListener ("click", function() {
+				//   $("#bg").css("background", "black");
+				//   console.log("did the background change yet");
+				// });
+
+				var clicks = 0;
+				$("#button-background").click(function() {
+					clicks++; 
+					if (clicks%2 == 0) {	//if even # of clicks, change back to original
+						$("#background-change").attr("id", "bg");
+						console.log("sorry, i was too scared of the dark " + clicks);
+					}
+
+					else if (clicks%2 != 0) { //if odd # of clicks, make background dark
+						$("#bg").attr("id", "background-change");
+						console.log("hope you're not scared of the dark " + clicks);
+					}
+				});
+
+				// $("#button-background").click(function() {
+				// 	$("#bg").addClass("background-change");
+				// 	console.log("what about now?");
+				// });
+
+
 			// Scroll restoration.
 			// This prevents the page from scrolling back to the top on a hashchange.
 				if ('scrollRestoration' in history)
