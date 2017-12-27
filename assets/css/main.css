@@ -65,7 +65,12 @@
 	}
 
 	body {
-		background: #1b1f22;
+		background: linear-gradient(45deg, rgba(44, 26, 44, 0.8) 20%, rgba(111, 72, 111, 0.8) 60%, rgba(129, 110, 129, 0.8)),
+      url("http://images.all-free-download.com/images/graphiclarge/astronomy_background_dark_exploration_fish_galaxy_604345.jpg");
+      	background-size: auto, 256px 256px;
+		background-size: cover;
+		background-position: center, center;
+		background-repeat: no-repeat, repeat;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after, body.is-switching *, body.is-switching *:before, body.is-switching *:after {
@@ -963,7 +968,7 @@
 		padding: 0 1.25rem 0 1.35rem;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
+		text-transform: normal;
 		white-space: nowrap;
 	}
 
@@ -1079,8 +1084,14 @@
 			background-position: center, center;
 			background-repeat: no-repeat, repeat;
 			z-index: 2;
+			/*background: linear-gradient(45deg, #0f0c29 20%, #302b63 60%, #24243e); */
 
 			/* https://jsfiddle.net/ro3aw6mo/ */
+		}
+
+		#background-change { 
+			/*background: pink; colour isn't working right now :(
+			z-index: 5;*/
 		}
 
 		#bg:after {
@@ -1270,7 +1281,14 @@
 				-webkit-transform: translateZ(0) scale(1.0, 1.0);
 			}
 
-			.logo-circular:hover {
+			#button-background {
+				position: absolute;
+				top: 25px;
+				right: 25px;
+				z-index: 5;
+			}
+
+			/*.logo-circular:hover { DISABLE HOVER FOR NOW. UNTIL I FIGURE HOW TO MAKE IT WORK PROPERLY GRRR
 				width: 23rem;
 				height: 23rem;
 				margin-top: -50%;
@@ -1278,20 +1296,11 @@
 				-ms-transform: translate(-150px, -150px);
 		        -webkit-transform: translate(-150px, -150px); 
 		        transform: translate(-6rem, -7rem);
-
-		         /*rotate(22deg);*/ /*maybe add this in after i change translation values. stick next to translate*/
-
-				/*border-radius: 50%;
-				-webkit-border-radius: 50%;
-				-moz-border-radius: 50%;*/
-				/*border: solid 1px white;*/
 				background-image: url('https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Sun-and-Moon-PNG/Transparent_Realistic_Sun_PNG_Clipart.png?m=1419205617');
 				background-size: 23rem 23rem;
-				/*-webkit-backface-visibility: hidden;
-				-webkit-transform: translateZ(0) scale(1.0, 1.0);*/
 				display:block;
 			}
-
+*/
 			/*----------------------------TESTING TESTING----------------------------------*/
 
 			.container {
