@@ -618,7 +618,7 @@
 			opacity: 0.5;
 			position: absolute;
 			top: 0;
-			width: 100%;
+			/*width: 100%;*/ /*removed because of weird dark space behind non-100% images*/
 		}
 
 		.image img {
@@ -664,6 +664,11 @@
 
 			.image.main img {
 				width: 100%;
+			}
+
+			.image.main.profile img {
+				width: 50%;
+				text-align: center;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -1283,8 +1288,8 @@
 
 			#button-background {
 				position: absolute;
-				top: 25px;
-				right: 25px;
+				top: 5px;
+				right: 5px;
 				z-index: 5;
 			}
 
