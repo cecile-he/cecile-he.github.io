@@ -365,7 +365,7 @@
 				// TESTING BACKGROUND CHANGE ON BUTTON CLICK HEYYYYY
 
 				var bgButton = document.createElement("button"); //create a button in the HTML
-				bgButton.innerHTML = "let's switch it up!";
+				bgButton.innerHTML = "activate night vision";
 
 				var bodylicious = document.getElementsByTagName("body")[0];
 				bodylicious.appendChild(bgButton);
@@ -382,11 +382,13 @@
 					clicks++; 
 					if (clicks%2 == 0) {	//if even # of clicks, change back to original
 						$("#background-change").attr("id", "bg");
+						bgButton.innerHTML = "activate night vision";
 						console.log("sorry, i was too scared of the dark " + clicks);
 					}
 
 					else if (clicks%2 != 0) { //if odd # of clicks, make background dark
 						$("#bg").attr("id", "background-change");
+						bgButton.innerHTML = "scared of the dark";
 						console.log("hope you're not scared of the dark " + clicks);
 					}
 				});
